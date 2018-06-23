@@ -1,17 +1,22 @@
 import 'phaser';
 
-import TestScene from './scenes/PlayScene';
+import PlayScene from './scenes/PlayScene';
+import EndScene from './scenes/EndScene';
+import StartScene from "./scenes/StartScene";
 
 const config:GameConfig = {
     type: Phaser.AUTO,
     parent: 'content',
-    width: 640,
-    height: 480,
+    width: 360,
+    height: 640,
     resolution: 1, 
     backgroundColor: "#EDEEC9",
     scene: [
-      TestScene
-    ]
+        StartScene, PlayScene, EndScene
+    ],
+    physics: {
+        default: 'arcade'
+    },
 };
 
 new Phaser.Game(config);

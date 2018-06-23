@@ -28,6 +28,7 @@
     "webpack": "3.11.0"
   },
   "dependencies": {
+    "eventemitter2": "^5.0.1",
     "phaser": "3.3.0"
   }
 }

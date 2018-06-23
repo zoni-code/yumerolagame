@@ -5585,7 +5585,7 @@ declare namespace Phaser {
              * Calls each of the listeners registered for a given event.
              * @param event The event name.
              */
-            emit(event: string | symbol): Boolean;
+            emit(event: string | symbol, data?: any): Boolean;
 
             /**
              * Add a listener for a given event.
@@ -13592,7 +13592,7 @@ declare namespace Phaser {
                  * @param offsetY [description]
                  * @param trackVisible [description]
                  */
-                startFollow(target: any, offsetX: number, offsetY: number, trackVisible: boolean): Phaser.GameObjects.Particles.ParticleEmitter;
+                startFollow(target: any, offsetX?: number, offsetY?: number, trackVisible?: boolean): Phaser.GameObjects.Particles.ParticleEmitter;
 
                 /**
                  * [description]
@@ -28373,7 +28373,7 @@ declare namespace Phaser {
                  * @param x [description]
                  * @param y [description]
                  */
-                setBounce(x: any, y: any): any;
+                setBounce(x: any, y?: any): any;
 
                 /**
                  * [description]
@@ -29619,7 +29619,7 @@ declare namespace Phaser {
                  * @param processCallback The callback to invoke when the two objects collide. Must return a boolean.
                  * @param callbackContext The scope in which to call the callbacks.
                  */
-                collider(object1: Phaser.Physics.Arcade.Body, object2: Phaser.Physics.Arcade.Body, collideCallback: Function, processCallback: Function, callbackContext: object): Phaser.Physics.Arcade.Collider;
+                collider(object1: Phaser.Physics.Arcade.Body, object2: Phaser.Physics.Arcade.Body, collideCallback: Function, processCallback?: Function, callbackContext?: object): Phaser.Physics.Arcade.Collider;
 
                 /**
                  * Create a new Arcade Physics Collider Overlap object.
