@@ -892,7 +892,14 @@ function (_super) {
   };
 
   StartScene.prototype.create = function () {
+    var _this = this;
+
     this.add.sprite(180, 320, "bg");
+    document.querySelector('#content').addEventListener('click', function () {
+      var canvas = _this.sys.game.canvas;
+      var fullscreen = _this.sys.game.device.fullscreen;
+      canvas[fullscreen.request]();
+    });
     this.input.on("pointerdown", this.toPlayScence, this);
     this.input.keyboard.on("keydown_SPACE", this.toPlayScence);
   };

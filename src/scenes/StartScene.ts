@@ -13,6 +13,12 @@ class StartScene extends Phaser.Scene {
     create() {
         this.add.sprite(180, 320, "bg");
 
+        document.querySelector('#content').addEventListener('click', () => {
+            var canvas = this.sys.game.canvas;
+            var fullscreen = this.sys.game.device.fullscreen;
+            canvas[fullscreen.request]();
+        });
+
         this.input.on("pointerdown", this.toPlayScence, this);
         this.input.keyboard.on("keydown_SPACE", this.toPlayScence);
     }
